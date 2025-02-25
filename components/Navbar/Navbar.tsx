@@ -4,7 +4,7 @@ import { NavProps, ButtonProps } from "./Navbar.interface";
 import Link from "next/link";
 
 const Logo = () => (
-  <Image src="/logo.svg" alt="logo" height={100} width={150} />
+  <Image src="/logo.png" alt="logo" height={100} width={150} />
 );
 
 const HamburgerButton = ({ onClick }: ButtonProps) => (
@@ -44,7 +44,7 @@ export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
               </Link>
             ))}
           </ul>
-          <button className="bg-[#f26641] hover:opacity-80 px-6 py-2.5 rounded-full text-sm text-white hidden md:flex">
+          <button className="bg-[black] hover:opacity-80 px-6 py-2.5 rounded-full text-sm text-white hidden md:flex">
             Get Started
           </button>
           <div className="cursor-pointer flex md:hidden">

@@ -3,151 +3,113 @@ import { Navigation, Social } from "@/components/Footer/Footer.interface";
 import { NavItem } from "@/components/Navbar/Navbar.interface";
 import { Review } from "@/components/ReviewsComponent/ReviewsComponent.interface";
 
+// Navigation Items
 export const navItems: NavItem[] = [
-  {
-    id: "1",
-    name: "Pricing",
-    link: "#pricing",
-  },
-  {
-    id: "2",
-    name: "Product",
-    link: "#product",
-  },
-  {
-    id: "3",
-    name: "About Us",
-    link: "#about-us",
-  },
-  {
-    id: "4",
-    name: "Careers",
-    link: "#careers",
-  },
-  {
-    id: "5",
-    name: "Community",
-    link: "#community",
-  },
+  { id: "1", name: "Features", link: "#features" },
+  { id: "2", name: "Pricing", link: "#pricing" },
+  { id: "3", name: "Industries", link: "#industries" },
+  { id: "4", name: "Contact Us", link: "#contact" },
 ];
 
+// Feature List
 export const features: Feature[] = [
   {
-    id: "1",
-    title: "Track company-wide progress",
+    id: 1,
+    title: "Advanced Lead Management",
     description:
-      "See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to  the smallest of details. Never lose sight of the bigger picture again.",
+      "Upload, track, and distribute leads effortlessly among your sales team with real-time updates.",
   },
   {
-    id: "2",
-    title: "Advanced built-in reports",
+    id: 2,
+    title: "Meta & Google Ad Lead Integration",
     description:
-      "Set internal delivery estimates and track progress toward company goals. Our customizable dashboard helps you build out the reports you need to keep key stakeholders informed.",
+      "Automatically capture leads from Meta and Google Ads, ensuring you never miss a potential customer.",
   },
   {
-    id: "3",
-    title: "Everything you need in one place",
+    id: 3,
+    title: "Automated Lead Distribution",
     description:
-      "Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers on all-in-one team productivity solutions.",
+      "Assign leads to the right sales representatives based on predefined rules for maximum efficiency.",
+  },
+  {
+    id: 4,
+    title: "Bulk WhatsApp Messaging",
+    description:
+      "Engage your customers instantly with personalized bulk WhatsApp messages at scale.",
+  },
+  {
+    id: 5,
+    title: "Email Marketing Automation",
+    description:
+      "Run targeted email campaigns to nurture leads and convert them into loyal customers.",
+  },
+  {
+    id: 6,
+    title: "CRM for Real Estate",
+    description:
+      "Specially designed for real estate businesses to manage, track, and convert property leads effectively.",
+  },
+  {
+    id: 7,
+    title: "Performance Analytics",
+    description:
+      "Gain insights into lead conversions, sales performance, and marketing effectiveness with detailed reports.",
   },
 ];
 
+// Customer Reviews
 export const reviews: Review[] = [
   {
     id: "1",
-    name: "Anisha Li",
-    image: "/avatar-anisha.png",
+    name: "Rohan Sharma",
+    image: "/avatar-rohan.png",
     review:
-      "Manage has supercharged our team's workflow. The maintain visibility on larger milestones at all times keeps everyone motivated.",
+      "This CRM has revolutionized the way we manage leads. Our conversion rates have skyrocketed!",
   },
   {
     id: "2",
-    name: "Ali Bravo",
-    image: "/avatar-ali.png",
+    name: "Meera Kapoor",
+    image: "/avatar-meera.png",
     review:
-      "We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.",
+      "The integration with Meta and Google Ads is seamless. No more manually importing leads—it's all automated!",
   },
   {
     id: "3",
-    name: "Richard Watts",
-    image: "/avatar-richard.png",
+    name: "Vikram Patel",
+    image: "/avatar-vikram.png",
     review:
-      "Manage allows us to provide structure and process keeps us organized and focused. I can't stop reconnect them to everyone I talk to!",
+      "Bulk WhatsApp messaging has allowed us to engage our customers more effectively. Highly recommended!",
   },
   {
     id: "4",
-    name: "Shanai",
-    image: "/avatar-shanai.png",
+    name: "Ayesha Khan",
+    image: "/avatar-ayesha.png",
     review:
-      "Manage allows us to provide structure and process keeps us organized and focused. I can't stop reconnect them to everyone I talk to!",
+      "Real estate lead tracking is effortless with this CRM. We've closed more deals than ever before!",
   },
 ];
 
+// Social Media Links
 export const socials: Social[] = [
-  {
-    id: "1",
-    icon: "/icon-facebook.svg",
-    title: "Facebook",
-  },
-  {
-    id: "2",
-    icon: "/icon-twitter.svg",
-    title: "Twitter",
-  },
-  {
-    id: "3",
-    icon: "/icon-pinterest.svg",
-    title: "Pinterest",
-  },
-  {
-    id: "4",
-    icon: "/icon-youtube.svg",
-    title: "YouTube",
-  },
-  {
-    id: "5",
-    icon: "/icon-instagram.svg",
-    title: "Instagram",
-  },
+  { id: "1", icon: "/icon-facebook.svg", title: "Facebook" },
+  { id: "2", icon: "/icon-linkedin.svg", title: "LinkedIn" },
+  { id: "3", icon: "/icon-twitter.svg", title: "Twitter" },
+  { id: "4", icon: "/icon-youtube.svg", title: "YouTube" },
+  { id: "5", icon: "/icon-instagram.svg", title: "Instagram" },
 ];
 
+// Footer Navigation
 export const navigations: Navigation[] = [
-  {
-    id: "1",
-    name: "Home",
-    url: "#",
-  },
-  {
-    id: "2",
-    name: "Pricing",
-    url: "#",
-  },
-  {
-    id: "3",
-    name: "Products",
-    url: "#",
-  },
-  {
-    id: "4",
-    name: "About Us",
-    url: "#",
-  },
+  { id: "1", name: "Home", url: "#" },
+  { id: "2", name: "Features", url: "#features" },
+  { id: "3", name: "Pricing", url: "#pricing" },
+  { id: "4", name: "Industries", url: "#industries" },
+  { id: "5", name: "Contact", url: "#contact" },
 ];
 
+// Other Footer Links
 export const otherNavigations: Navigation[] = [
-  {
-    id: "1",
-    name: "Careers",
-    url: "#",
-  },
-  {
-    id: "2",
-    name: "Community",
-    url: "#",
-  },
-  {
-    id: "3",
-    name: "Privacy Policy",
-    url: "#",
-  },
+  { id: "1", name: "Terms of Service", url: "#terms" },
+  { id: "2", name: "Privacy Policy", url: "#privacy-policy" },
 ];
+

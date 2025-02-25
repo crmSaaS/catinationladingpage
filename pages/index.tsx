@@ -19,6 +19,10 @@ import { FeatureComponent } from "@/components/FeatureComponent";
 import { ReviewsComponent } from "@/components/ReviewsComponent/ReviewsComponent";
 import { TaglineComponent } from "@/components/TaglineComponent/TaglineComponent";
 import { Footer } from "@/components/Footer";
+import {OurPartnersComponent} from "../components/OurPartnersComponent/OurPartnersComponent";
+
+
+
 
 export default function Home() {
   return (
@@ -45,6 +49,9 @@ export default function Home() {
             </section>
             <section>
               <ReviewsComponent reviews={reviews} />
+            </section>
+            <section>
+            <OurPartnersComponent />
             </section>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export const TabletPatternBottomDesktop = () => {
   return (
     <Image
-      src="/bg-tablet-pattern.svg"
+      src=""
       alt="tablet-pattern"
       className="absolute hidden lg:block -left-[40%] top-[50%] -z-10"
       height={800}

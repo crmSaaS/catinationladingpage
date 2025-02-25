@@ -8,7 +8,7 @@ export const NewsLetter = () => {
         type="email"
         placeholder="Email subscribe"
       />
-      <button className="bg-[#f2603c] px-4 py-3 rounded-full hover:opacity-80">
+      <button className="bg-[black] px-4 py-3 rounded-full hover:opacity-80">
         go
       </button>
     </div>
