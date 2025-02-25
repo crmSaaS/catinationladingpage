@@ -14,43 +14,43 @@ export const navItems: NavItem[] = [
 // Feature List
 export const features: Feature[] = [
   {
-    id: 1,
+    id: "1",
     title: "Advanced Lead Management",
     description:
       "Upload, track, and distribute leads effortlessly among your sales team with real-time updates.",
   },
   {
-    id: 2,
+    id: "2",
     title: "Meta & Google Ad Lead Integration",
     description:
       "Automatically capture leads from Meta and Google Ads, ensuring you never miss a potential customer.",
   },
   {
-    id: 3,
+    id: "3",
     title: "Automated Lead Distribution",
     description:
       "Assign leads to the right sales representatives based on predefined rules for maximum efficiency.",
   },
   {
-    id: 4,
+    id: "4",
     title: "Bulk WhatsApp Messaging",
     description:
       "Engage your customers instantly with personalized bulk WhatsApp messages at scale.",
   },
   {
-    id: 5,
+    id: "5",
     title: "Email Marketing Automation",
     description:
       "Run targeted email campaigns to nurture leads and convert them into loyal customers.",
   },
   {
-    id: 6,
+    id: "6",
     title: "CRM for Real Estate",
     description:
       "Specially designed for real estate businesses to manage, track, and convert property leads effectively.",
   },
   {
-    id: 7,
+    id: "7",
     title: "Performance Analytics",
     description:
       "Gain insights into lead conversions, sales performance, and marketing effectiveness with detailed reports.",
