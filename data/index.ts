@@ -92,7 +92,7 @@ export const reviews: Review[] = [
 // Social Media Links
 export const socials: Social[] = [
   { id: "1", icon: "/icon-facebook.svg", title: "Facebook" },
-  { id: "2", icon: "/icon-linkedin.svg", title: "LinkedIn" },
+
   { id: "3", icon: "/icon-twitter.svg", title: "Twitter" },
   { id: "4", icon: "/icon-youtube.svg", title: "YouTube" },
   { id: "5", icon: "/icon-instagram.svg", title: "Instagram" },
