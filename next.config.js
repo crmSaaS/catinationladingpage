@@ -1,12 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**", // Allow all domains (not recommended for security)
-      },
-    ],
     domains: [
       "www.dlf.in",
       "www.omaxe.com",
@@ -21,7 +14,6 @@ const nextConfig = {
       "www.unitechgroup.com",
       "www.gaursonsindia.com",
     ],
+    unoptimized: true,  // ✅ Add this line
   },
 };
-
-module.exports = nextConfig;

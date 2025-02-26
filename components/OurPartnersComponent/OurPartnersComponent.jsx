@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+// Partner data
 const partners = [
   { id: 1, name: "DLF", logo: "https://www.dlf.in/images/logo-black.svg" },
   { id: 3, name: "Omaxe", logo: "https://www.omaxe.com/assets/front/images/omaxe-logo.webp" },
@@ -12,7 +13,7 @@ const partners = [
   { id: 7, name: "Eldeco Group", logo: "https://www.eldecogroup.com/assests/images/logo.png" },
   { id: 8, name: "Raheja Developers", logo: "https://raheja.com/images/raheja-logo.png" },
   { id: 9, name: "Ajnara", logo: "https://www.ajnara.co/images/logo.png" },
-  { id: 10, name: "Wave Infratech", logo: "https://infratech.thewavegroup.com/images/Wave-Infratech-Logo.png" },
+ 
   { id: 11, name: "Ireo", logo: "https://ireoprojects.co.in/image/ireo-logo.png" },
   { id: 12, name: "Unitech", logo: "https://www.unitechgroup.com/images/logo-demo.gif" },
   { id: 13, name: "Gaursons India", logo: "https://www.gaursonsindia.com/images/logo.png" },
@@ -21,6 +22,7 @@ const partners = [
 export const OurPartnersComponent = () => {
   const sliderRef = useRef(null);
 
+  // Auto-scroll every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       if (sliderRef.current) {
@@ -31,6 +33,7 @@ export const OurPartnersComponent = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Manual scrolling functions
   const scrollLeft = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({ left: -200, behavior: "smooth" });
@@ -73,13 +76,14 @@ export const OurPartnersComponent = () => {
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.1 }}
             >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={140}
-                height={70}
-                className="max-h-20 object-contain"
-              />
+              <Image 
+  src={partner.logo} 
+  alt={partner.name} 
+  width={140} 
+  height={70} 
+  style={{ objectFit: "contain" }} 
+/>
+
             </motion.div>
           ))}
         </motion.div>
