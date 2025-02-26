@@ -3,93 +3,110 @@ import Image from "next/image";
 import { NavProps, ButtonProps } from "./Navbar.interface";
 import Link from "next/link";
 
+// Logo Component (SEO-Optimized)
 const Logo = () => (
-  <Image src="/logo.png" alt="logo" height={100} width={150} />
+  <Link href="/" aria-label="Home">
+    <Image 
+      src="/logo.png" 
+      alt="CRM Software Logo" 
+      height={80}  // Reduced height
+      width={130}  // Adjusted width proportionally
+      priority 
+    />
+  </Link>
 );
 
-const HamburgerButton = ({ onClick }: ButtonProps) => (
-  <Image
-    src="/icon-hamburger.svg"
-    className="flex md:hidden"
-    alt="menu"
-    height={24}
-    width={24}
-    onClick={onClick}
-  />
+// Hamburger Menu Button
+const HamburgerButton: FC<ButtonProps> = ({ onClick }) => (
+  <button onClick={onClick} aria-label="Open mobile menu">
+    <Image 
+      src="/icon-hamburger.svg" 
+      alt="Open menu" 
+      height={20}  // Reduced icon size
+      width={20}  
+      className="flex md:hidden"
+    />
+  </button>
 );
 
-const CloseButton = ({ onClick }: ButtonProps) => (
-  <Image
-    src="/icon-close.svg"
-    className="flex md:hidden"
-    alt="close"
-    height={24}
-    width={24}
-    onClick={onClick}
-  />
+// Close Menu Button
+const CloseButton: FC<ButtonProps> = ({ onClick }) => (
+  <button onClick={onClick} aria-label="Close mobile menu">
+    <Image 
+      src="/icon-close.svg" 
+      alt="Close menu" 
+      height={20}  
+      width={20}  
+      className="flex md:hidden"
+    />
+  </button>
 );
 
 export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to smoothly scroll to section
+  // Function for Smooth Scrolling
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setIsMobileMenuOpen(false); // Close menu after clicking
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <>
-      <nav className="w-full py-8 relative">
-        <div className="flex flex-row items-center justify-between">
-          <Logo />
-          <ul className="flex-row items-center gap-6 lg:gap-8 hidden md:flex">
-            {navItems.map(({ name }, idx) => (
-              <li
-                key={idx}
-                className="text-sm text-gray-900 cursor-pointer"
-                onClick={() =>
-                  name.toLowerCase() === "features" ? scrollToSection("features") : null
-                }
+    <nav className="w-full py-4 bg-white shadow-md fixed top-0 left-0 right-0 z-50"> {/* Reduced height */}
+      <div className="container mx-auto flex flex-row items-center justify-between px-6">
+        <Logo />
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex flex-row items-center gap-5 lg:gap-6"> {/* Adjusted spacing */}
+          {navItems.map(({ name }, idx) => (
+            <li key={idx} className="text-sm text-gray-900 cursor-pointer hover:text-gray-600 transition-colors">
+              <button
+                onClick={() => (name.toLowerCase() === "features" ? scrollToSection("features") : null)}
+                className="focus:outline-none"
               >
                 {name}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA Button */}
+        <Link href="/get-started">
+          <button className="bg-black hover:opacity-80 px-5 py-2 rounded-full text-sm text-white hidden md:flex">
+            Get Started
+          </button>
+        </Link>
+
+        {/* Mobile Menu Button */}
+        <div className="cursor-pointer flex md:hidden">
+          {!isMobileMenuOpen ? (
+            <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
+          ) : (
+            <CloseButton onClick={() => setIsMobileMenuOpen(false)} />
+          )}
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-14 right-0 w-full bg-white shadow-xl py-4"> {/* Adjusted position */}
+          <ul className="flex flex-col items-center gap-4">
+            {navItems.map(({ name }, idx) => (
+              <li key={idx} className="text-sm font-semibold text-gray-900 cursor-pointer hover:text-gray-600">
+                <button
+                  onClick={() => (name.toLowerCase() === "features" ? scrollToSection("features") : setIsMobileMenuOpen(false))}
+                  className="focus:outline-none"
+                >
+                  {name}
+                </button>
               </li>
             ))}
           </ul>
-          <button className="bg-[black] hover:opacity-80 px-6 py-2.5 rounded-full text-sm text-white hidden md:flex">
-            Get Started
-          </button>
-          <div className="cursor-pointer flex md:hidden">
-            {!isMobileMenuOpen ? (
-              <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
-            ) : (
-              <CloseButton onClick={() => setIsMobileMenuOpen(false)} />
-            )}
-          </div>
         </div>
-        
-        {/* Mobile Menu */}
-        <div className="absolute top-20 right-0 w-full">
-          {isMobileMenuOpen && (
-            <ul className="flex-col items-center gap-6 lg:gap-8 flex md:hidden bg-white shadow-xl py-6 mx-8">
-              {navItems.map(({ name }, idx) => (
-                <li
-                  key={idx}
-                  className="text-sm font-semibold text-gray-900 cursor-pointer"
-                  onClick={() =>
-                    name.toLowerCase() === "features" ? scrollToSection("features") : setIsMobileMenuOpen(false)
-                  }
-                >
-                  {name}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </nav>
-    </>
+      )}
+    </nav>
   );
 };

@@ -1,30 +1,49 @@
 import React from "react";
-import SocialAnimation from "./SocialAnimation"; // Import the animation component
+import SocialAnimation from "./SocialAnimation"; // ✅ Lazy-loaded for better performance
 
 export const HeroComponent = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-0 items-center lg:min-h-[calc(100vh-112px)] px-6 md:px-12">
-      {/* Left Content */}
-      <div className="flex flex-col items-center lg:items-start justify-start gap-8 w-full lg:w-1/2">
-        <h1 className="text-4xl md:text-6xl font-semibold lg:text-left text-center text-gray-900">
-        Convert Leads, Close Deals
+    <section
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto max-w-7xl px-6 md:px-12 pt-40 pb-16"
+      aria-labelledby="hero-heading"
+    >
+      {/* ✅ Left Content (SEO & Horizontal Fit) */}
+      <div className="flex flex-col items-center lg:items-start gap-6 w-full lg:w-1/2">
+        <h1 
+          id="hero-heading" 
+          className="text-4xl md:text-5xl font-bold lg:text-left text-center text-gray-900 leading-tight"
+        >
+          Convert More Leads, Close More Deals
         </h1>
-        <h3 className="lg:w-2/3 text-center text-base lg:text-left text-gray-400">
-          Manage and streamline your leads, automate distribution, and enhance marketing 
-          campaigns—all from one powerful CRM platform.
-        </h3>
+        <p className="lg:w-3/4 text-center lg:text-left text-gray-600 text-lg leading-relaxed">
+          <strong>Boost sales and automate growth</strong> with <strong>Proplye CRM</strong>.  
+          Easily manage <strong>lead distribution</strong>, optimize <strong>marketing campaigns</strong>,  
+          and track every deal effortlessly.
+        </p>
 
-      
-
-        <button className="bg-[black] hover:opacity-80 px-6 py-2.5 w-auto rounded-full text-sm text-white">
-          Get Started
-        </button>
+        {/* ✅ Call-to-Action (Better Layout) */}
+        <div className="flex flex-wrap gap-4 mt-2">
+          <a 
+            href="/get-started"
+            className="bg-black hover:bg-gray-800 px-6 py-3 rounded-full text-white text-sm transition-all shadow-lg"
+            aria-label="Get started with Proplye CRM today"
+          >
+            Get Started
+          </a>
+          <a 
+            href="/demo"
+            className="border border-black hover:bg-black hover:text-white px-6 py-3 rounded-full text-black text-sm transition-all shadow-lg"
+            aria-label="Book a free demo of Proplye CRM"
+          >
+            Book a Demo
+          </a>
+        </div>
       </div>
 
-      {/* Right Content (Replacing Image with Animation) */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center">
-        <SocialAnimation /> {/* Using animation instead of an image */}
+      {/* ✅ Right Content (Aligned Horizontally) */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center pt-20">
+        <SocialAnimation /> {/* ✅ Lazy-loaded for faster performance */}
       </div>
-    </div>
+    </section>
   );
 };
