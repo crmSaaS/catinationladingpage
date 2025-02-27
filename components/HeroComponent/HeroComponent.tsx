@@ -1,49 +1,62 @@
 import React from "react";
-import SocialAnimation from "./SocialAnimation"; // ✅ Lazy-loaded for better performance
+import SocialAnimation from "./SocialAnimation"; // ✅ Lazy-loaded for performance
 
 export const HeroComponent = () => {
   return (
-    <section
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto max-w-7xl px-6 md:px-12 pt-40 pb-16"
+    <header 
+      className="relative flex flex-col items-center lg:flex-row justify-between container mx-auto max-w-7xl px-4 md:px-10 pt-32 pb-16" // Increased pt-32
       aria-labelledby="hero-heading"
     >
-      {/* ✅ Left Content (SEO & Horizontal Fit) */}
-      <div className="flex flex-col items-center lg:items-start gap-6 w-full lg:w-1/2">
+      <main className="flex flex-col items-center lg:items-start gap-4 w-full lg:w-1/2">
+        {/* ✅ SEO-Optimized & Compact H1 */}
         <h1 
           id="hero-heading" 
-          className="text-4xl md:text-5xl font-bold lg:text-left text-center text-gray-900 leading-tight"
+          className="text-4xl md:text-5xl font-bold text-center lg:text-left text-gray-900 leading-snug"
+          aria-label="Catination - AI-Powered CRM for Sales & Lead Management"
         >
-          Convert More Leads, Close More Deals
+          Close More Deals with <span className="text-blue-600">Catination</span> – The AI-Powered CRM
         </h1>
-        <p className="lg:w-3/4 text-center lg:text-left text-gray-600 text-lg leading-relaxed">
-          <strong>Boost sales and automate growth</strong> with <strong>Proplye CRM</strong>.  
-          Easily manage <strong>lead distribution</strong>, optimize <strong>marketing campaigns</strong>,  
-          and track every deal effortlessly.
+        
+        {/* ✅ Compact & Justified SEO Content */}
+        <p className="lg:w-3/4 text-center lg:text-left text-gray-600 text-base leading-relaxed lg:text-justify">
+          <strong>Catination is an advanced AI-powered CRM</strong> built for  
+          <strong> businesses, sales teams, and marketers</strong> to  
+          <strong> automate lead management</strong>, improve customer engagement,  
+          and drive more revenue. With <strong>smart lead distribution</strong>,  
+          <strong> real-time tracking</strong>, and <strong>AI-driven automation</strong>,  
+          Catination helps you <strong>grow faster</strong>.
         </p>
 
-        {/* ✅ Call-to-Action (Better Layout) */}
-        <div className="flex flex-wrap gap-4 mt-2">
-          <a 
-            href="/get-started"
-            className="bg-black hover:bg-gray-800 px-6 py-3 rounded-full text-white text-sm transition-all shadow-lg"
-            aria-label="Get started with Proplye CRM today"
-          >
-            Get Started
-          </a>
-          <a 
-            href="/demo"
-            className="border border-black hover:bg-black hover:text-white px-6 py-3 rounded-full text-black text-sm transition-all shadow-lg"
-            aria-label="Book a free demo of Proplye CRM"
-          >
-            Book a Demo
-          </a>
-        </div>
-      </div>
+        {/* ✅ Compact CTA Buttons */}
+        <nav aria-label="Call to action links">
+          <div className="flex flex-wrap gap-3 mt-2">
+            <a 
+              href="https://crm.catination.com"
+              className="bg-black hover:bg-gray-800 px-5 py-2 rounded-full text-white text-xs transition-all shadow-lg"
+              title="Start using Catination CRM today for free"
+            >
+              Try for Free
+            </a>
+            <a 
+              href="/demo"
+              className="border border-black hover:bg-black hover:text-white px-5 py-2 rounded-full text-black text-xs transition-all shadow-lg"
+              title="Book a demo of Catination CRM"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </nav>
 
-      {/* ✅ Right Content (Aligned Horizontally) */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center pt-20">
-        <SocialAnimation /> {/* ✅ Lazy-loaded for faster performance */}
-      </div>
-    </section>
+        {/* ✅ Social Animation (Mobile Position Adjusted) */}
+        <div className="w-full flex justify-center lg:hidden mt-16 md:mt-14"> {/* Increased margin for better spacing on mobile */}
+          <SocialAnimation />
+        </div>
+      </main>
+
+      {/* ✅ Right Content (Compact Social Animation) */}
+      <aside className="w-full lg:w-1/2 flex items-center justify-center pt-16 lg:pt-16 hidden lg:flex" aria-hidden="true"> {/* Adjusted padding for spacing */}
+        <SocialAnimation />
+      </aside>
+    </header>
   );
 };

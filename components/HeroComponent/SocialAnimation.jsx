@@ -16,7 +16,7 @@ export default function SocialAnimation() {
   return (
     <section 
       id="social-icons" 
-      className="flex justify-center items-center min-h-[50vh] relative mt-[-100px]"
+      className="flex justify-center items-center min-h-[50vh] relative mt-[-100px] px-4"
       aria-labelledby="social-icons-heading"
     >
       <h2 id="social-icons-heading" className="sr-only">
@@ -24,7 +24,7 @@ export default function SocialAnimation() {
       </h2>
 
       <motion.div 
-        className="grid grid-cols-3 gap-12 p-8"
+        className="grid grid-cols-3 gap-8 p-6 md:grid-cols-3 md:gap-12 md:p-8" // Adjusted for responsiveness
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut", staggerChildren: 0.2 }}
@@ -32,7 +32,7 @@ export default function SocialAnimation() {
         {icons.map(({ id, Icon, label }) => (
           <motion.div
             key={id}
-            className="p-6 rounded-full shadow-xl flex justify-center items-center border border-gray-300"
+            className="w-12 h-12 md:w-20 md:h-20 rounded-full shadow-lg flex justify-center items-center border border-gray-300 bg-white transition-all"
             whileHover={{
               scale: 1.2,
               boxShadow: "0px 8px 16px rgba(0,0,0,0.1)",
@@ -41,7 +41,7 @@ export default function SocialAnimation() {
             aria-label={label}
           >
             <Icon 
-              className="text-black text-5xl transition-all duration-300 hover:text-gray-600" 
+              className="text-black text-xl md:text-3xl transition-all duration-300 hover:text-gray-600" 
               title={label}
             />
           </motion.div>

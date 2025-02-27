@@ -57,7 +57,7 @@ export default function Home() {
         <TabletPatternTop />
         <div className="max-w-6xl mx-auto px-8 relative">
           <Navbar navItems={navItems} />
-          <div className="flex flex-col gap-24 lg:gap-20">
+          <div className="flex flex-col gap-15 lg:gap-20">
             {/* ✅ Hero Section with SEO Optimized Content */}
             <section aria-labelledby="hero-title">
               <HeroComponent />

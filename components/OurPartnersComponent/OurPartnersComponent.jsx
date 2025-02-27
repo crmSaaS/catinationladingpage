@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-// Partner data
 const partners = [
   { id: 1, name: "DLF", logo: "https://www.dlf.in/images/logo-black.svg" },
   { id: 3, name: "Omaxe", logo: "https://www.omaxe.com/assets/front/images/omaxe-logo.webp" },
@@ -13,27 +12,26 @@ const partners = [
   { id: 7, name: "Eldeco Group", logo: "https://www.eldecogroup.com/assests/images/logo.png" },
   { id: 8, name: "Raheja Developers", logo: "https://raheja.com/images/raheja-logo.png" },
   { id: 9, name: "Ajnara", logo: "https://www.ajnara.co/images/logo.png" },
- 
   { id: 11, name: "Ireo", logo: "https://ireoprojects.co.in/image/ireo-logo.png" },
   { id: 12, name: "Unitech", logo: "https://www.unitechgroup.com/images/logo-demo.gif" },
   { id: 13, name: "Gaursons India", logo: "https://www.gaursonsindia.com/images/logo.png" },
 ];
 
 export const OurPartnersComponent = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef(null); // ✅ Fix: Removed HTMLDivElement
 
-  // Auto-scroll every 3 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({ left: 200, behavior: "smooth" });
-      }
-    }, 3000);
+    if (typeof window !== "undefined") { // ✅ Fix: Run only in browser
+      const interval = setInterval(() => {
+        if (sliderRef.current) {
+          sliderRef.current.scrollBy({ left: 200, behavior: "smooth" });
+        }
+      }, 3000);
 
-    return () => clearInterval(interval);
+      return () => clearInterval(interval);
+    }
   }, []);
 
-  // Manual scrolling functions
   const scrollLeft = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({ left: -200, behavior: "smooth" });
@@ -47,13 +45,12 @@ export const OurPartnersComponent = () => {
   };
 
   return (
-    <div className="py-16 bg-white relative">
+    <div  id="our-partners" className="py-16 bg-white relative">
       <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 mb-12">
         Our Partners
       </h2>
 
       <div className="max-w-6xl mx-auto relative overflow-hidden">
-        {/* Left Arrow */}
         <button
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-md z-10"
           onClick={scrollLeft}
@@ -61,7 +58,6 @@ export const OurPartnersComponent = () => {
           <FaChevronLeft size={20} />
         </button>
 
-        {/* Auto-scrolling logo container */}
         <motion.div
           ref={sliderRef}
           className="flex space-x-6 overflow-x-auto scrollbar-hide p-4"
@@ -77,18 +73,16 @@ export const OurPartnersComponent = () => {
               whileHover={{ scale: 1.1 }}
             >
               <Image 
-  src={partner.logo} 
-  alt={partner.name} 
-  width={140} 
-  height={70} 
-  style={{ objectFit: "contain" }} 
-/>
-
+                src={partner.logo} 
+                alt={partner.name} 
+                width={140} 
+                height={70} 
+                style={{ objectFit: "contain" }} 
+              />
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Right Arrow */}
         <button
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-md z-10"
           onClick={scrollRight}
