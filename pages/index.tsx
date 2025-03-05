@@ -27,59 +27,53 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* ✅ Primary SEO Meta Tags */}
-        <title>
-          Best CRM in the World | No.1 Real Estate CRM | Bulk WhatsApp, SMS & Email CRM
-        </title>
+        <title>Catination CRM - AI-Powered CRM for Bulk Messaging, Lead Management & Sales Automation</title>
         <meta
           name="description"
-          content="Catination CRM is the world's No.1 CRM for real estate, bulk WhatsApp, bulk SMS, bulk mailing, and lead management. Used by businesses in India, Dubai, USA, UK, and more."
+          content="Catination CRM is an advanced AI-driven software solution for businesses looking to automate bulk WhatsApp, SMS, email marketing, and lead management. Trusted worldwide for streamlining sales and marketing workflows."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-
-        {/* ✅ Multi-Target Keywords */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta
           name="keywords"
-          content="best CRM in the world, No.1 CRM software, top CRM in India, best real estate CRM in India, CRM for property dealers, real estate CRM in Dubai, real estate lead management software, top-ranked CRM for businesses, bulk WhatsApp CRM, bulk SMS CRM, bulk email CRM, email marketing software, lead generation CRM, AI-powered CRM, real estate automation, CRM for builders, CRM for brokers, CRM for real estate agents, CRM for startups, sales automation software, world’s best CRM, top CRM for real estate, best CRM for lead management, best CRM in Delhi, best CRM in Mumbai, best CRM in Bangalore, cloud-based CRM, CRM for business growth"
+          content="AI-powered CRM, lead management software, bulk WhatsApp marketing, bulk SMS platform, bulk email automation, CRM for sales teams, marketing automation software, best CRM for real estate, cloud-based CRM, automated lead tracking, WhatsApp CRM, sales funnel management, customer relationship management, CRM for startups, business growth software"
         />
-
-        {/* ✅ Open Graph / Facebook */}
-        <meta property="og:title" content="Best CRM in the World | No.1 Real Estate CRM | Catination CRM" />
+        
+        <meta property="og:title" content="Catination CRM - AI-Powered CRM for Bulk Messaging, Lead Management & Sales Automation" />
         <meta
           property="og:description"
-          content="Catination CRM is the top-rated CRM for real estate, bulk messaging, and lead management, trusted globally by businesses in India, Dubai, and more."
+          content="Automate lead management, bulk messaging, and sales workflows with Catination CRM. The all-in-one solution for businesses running Meta & Google Ads."
         />
-        <meta property="og:image" content="https://www.catination.com/images/social-preview.jpg" />
+        <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://www.catination.com" />
         <meta property="og:type" content="website" />
-
-        {/* ✅ Twitter Meta Tags */}
+        
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Best CRM in the World | No.1 Real Estate CRM | Catination CRM" />
+        <meta name="twitter:title" content="Catination CRM - AI-Powered CRM for Bulk Messaging, Lead Management & Sales Automation" />
         <meta
           name="twitter:description"
-          content="Catination CRM helps businesses streamline lead management, automate marketing, and boost sales with AI-powered bulk messaging tools."
+          content="AI-powered automation for lead generation and bulk messaging. Manage WhatsApp, SMS, and email campaigns seamlessly with Catination CRM."
         />
-        <meta name="twitter:image" content="https://www.catination.com/images/social-preview.jpg" />
+        <meta name="twitter:image" content="/logo.png" />
 
-        {/* ✅ Canonical URL */}
         <link rel="canonical" href="https://www.catination.com" />
+        <link rel="alternate" hreflang="en" href="https://www.catination.com" />
 
-        {/* ✅ Schema Markup (JSON-LD) */}
+
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "Catination CRM",
-            "image": "https://www.catination.com/images/social-preview.jpg",
+            "image": "/logo.png",
             "url": "https://www.catination.com",
             "author": {
               "@type": "Organization",
               "name": "Catination"
             },
             "description":
-              "Catination CRM is the best CRM in the world for real estate, bulk messaging, and lead management, trusted in India, Dubai, USA, and more.",
+              "Catination CRM is a leading AI-powered platform for bulk messaging, lead management, and sales automation. Ideal for businesses running Meta and Google Ads campaigns.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "offers": {
@@ -88,33 +82,63 @@ export default function Home() {
               "price": "699",
               "availability": "https://schema.org/InStock"
             },
-            "keywords": [
-              "best CRM in the world",
-              "No.1 CRM software",
-              "real estate CRM in India",
-              "top bulk WhatsApp CRM",
-              "bulk SMS software",
-              "email marketing CRM",
-              "best lead management CRM",
-              "AI-driven CRM for businesses",
-              "top-rated CRM in Dubai",
-              "CRM for real estate brokers",
-              "CRM for property dealers",
-              "cloud-based CRM",
-              "sales automation CRM"
-            ],
-            "areaServed": [
-              "India",
-              "Dubai",
-              "USA",
-              "UK",
-              "Canada",
-              "Singapore"
-            ],
+            "areaServed": ["India", "Dubai", "USA", "UK", "Canada", "Singapore"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "1024"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Verified User"
+              }
+            },
+            "sameAs": [
+              "https://www.instagram.com/catinationventures",
+              "https://www.linkedin.com/in/catination-ventures-280559352",
+              "https://www.facebook.com/share/1BZXVfsbT2/"
+            ],
+            "logo": "/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "catinationventures@gmail.com",
+              "telephone": "+91-7545840365",
+              "contactType": "customer support"
+            },
+            "FAQPage": {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What industries can benefit from Catination CRM?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Catination CRM is ideal for real estate, e-commerce, digital marketing agencies, and any business requiring bulk messaging and lead automation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does Catination CRM offer integrations with other tools?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Catination CRM seamlessly integrates with WhatsApp, SMS, email services, and ad platforms like Meta and Google Ads."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why is Catination CRM the best choice for real estate businesses?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Catination CRM is tailored for real estate with advanced lead tracking, automated follow-ups, and AI-driven sales workflows."
+                  }
+                }
+              ]
             }
           })}
         </script>
