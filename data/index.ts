@@ -8,7 +8,8 @@ export const navItems: NavItem[] = [
   { id: "1", name: "Features", link: "#features" },
   { id: "2", name: "Pricing", link: "#pricing" },
   { id: "3", name: "Industries", link: "#industries" },
-  { id: "4", name: "Contact Us", link: "#contact" },
+  { id: "4", name: "About Us", link: "#aboutus" },
+  { id: "5", name: "Reviews", link: "#review" }
 ];
 
 // Feature List

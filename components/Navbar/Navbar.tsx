@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC, useState } from "react";
 import Image from "next/image";
 import { NavProps, ButtonProps } from "./Navbar.interface";
@@ -49,13 +51,14 @@ export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const navbarHeight = 60; // Adjust for fixed navbar height
+      const navbarHeight = 80; // Increase this value if needed
       const elementPosition = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
-
+  
       window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
     setIsMobileMenuOpen(false); // Close mobile menu after clicking
   };
+  
 
   return (
     <nav className="w-full py-3 bg-white shadow-md fixed top-0 left-0 right-0 z-50">
@@ -74,6 +77,8 @@ export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
                     scrollToSection("catination-pricing");
                   } else if (name.toLowerCase() === "industries") {
                     scrollToSection("our-partners");
+                  } else if (name.toLowerCase() === "aboutus") {
+                    scrollToSection("about-us");
                   }
                 }}
                 className="focus:outline-none"
@@ -115,6 +120,8 @@ export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
                       scrollToSection("catination-pricing");
                     } else if (name.toLowerCase() === "industries") {
                       scrollToSection("our-partners");
+                    } else if (name.toLowerCase() === "about-us") {
+                      scrollToSection("about-us");
                     }
                   }}
                   className="focus:outline-none"
