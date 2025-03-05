@@ -57,7 +57,7 @@ export default function Home() {
         <meta name="twitter:image" content="/logo.png" />
 
         <link rel="canonical" href="https://www.catination.com" />
-        <link rel="alternate" hreflang="en" href="https://www.catination.com" />
+        {/* <link rel="alternate" hreflang="en" href="https://www.catination.com" /> */}
 
 
 
