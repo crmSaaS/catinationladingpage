@@ -143,7 +143,7 @@ export default function Home() {
           })}
         </script>
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <main className="relative overflow-hidden min-h-screen">
