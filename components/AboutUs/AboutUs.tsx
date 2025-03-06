@@ -72,7 +72,7 @@ const AboutUs: React.FC = () => {
 
         <motion.div variants={fadeInUp} className="mt-8 sm:mt-12">
           <motion.a
-            href="/pricing"
+            href="https://app.catination.com/"
             className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-full shadow-md transition duration-300 inline-block text-sm sm:text-base"
             whileHover={{ scale: 1.07 }}
           >

@@ -31,7 +31,7 @@ export const HeroComponent = () => {
         <nav aria-label="Call to action links">
           <div className="flex flex-wrap gap-3 mt-2">
             <a 
-              href="https://crm.catination.com"
+              href="https://app.catination.com/"
               className="bg-black hover:bg-gray-800 px-5 py-2 rounded-full text-white text-xs transition-all shadow-lg"
               title="Start using Catination CRM today for free"
             >

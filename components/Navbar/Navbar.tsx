@@ -90,7 +90,7 @@ export const Navbar: FC<NavProps> = ({ navItems = [] }) => {
         </ul>
 
         {/* 🔹 CTA Button */}
-        <Link href="https://crm.catination.com">
+        <Link href="https://app.catination.com/">
           <button className="bg-black hover:opacity-80 px-4 py-1.5 rounded-full text-sm text-white hidden md:flex">
             Get Started
           </button>
