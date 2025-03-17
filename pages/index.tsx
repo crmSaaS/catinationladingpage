@@ -130,12 +130,21 @@ export default function Home() {
                     "text": "Yes, Catination CRM seamlessly integrates with WhatsApp, SMS, email services, and ad platforms like Meta and Google Ads."
                   }
                 },
+                
                 {
                   "@type": "Question",
                   "name": "Why is Catination CRM the best choice for real estate businesses?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Catination CRM is tailored for real estate with advanced lead tracking, automated follow-ups, and AI-driven sales workflows."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Catination the same as Catenation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No! Catenation is a chemistry term that refers to the bonding of atoms. Catination, on the other hand, is an advanced CRM platform for businesses."
                   }
                 }
               ]

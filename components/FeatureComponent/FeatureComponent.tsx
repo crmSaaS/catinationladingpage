@@ -75,7 +75,7 @@ export const FeatureComponent: FC<FeatureProps> = ({ features }) => {
                 Our <strong>CRM solution</strong> helps you manage leads efficiently,  
                 improve <strong>customer engagement</strong>, and boost <strong>conversion rates</strong>.
               </p>
-              <a href="https://crm.catination.com" className="inline-block mt-4 px-6 py-3 bg-black text-white rounded-full text-lg font-medium hover:bg-gray-800 transition">
+              <a href="https://app.catination.com/" className="inline-block mt-4 px-6 py-3 bg-black text-white rounded-full text-lg font-medium hover:bg-gray-800 transition">
                 Get Started Now
               </a>
             </motion.div>
