@@ -12,7 +12,7 @@ const Logo = () => (
       src="/logo.png" 
       alt="CRM Software Logo" 
       height={80}  
-      width={125}  
+      width={150}  
       priority 
     />
   </Link>
